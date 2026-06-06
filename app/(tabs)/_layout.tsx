@@ -1,26 +1,40 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
-import { StyleSheet } from 'react-native';
 
-const TabLayout = () => {
+const TabsLayout = () => {
   return (
-    <Tabs>
+    <Tabs
+      screenOptions={{
+        headerTintColor: 'white',
+        headerStyle: {
+          backgroundColor: 'black',
+        },
+        headerTitleAlign: 'center',
+        tabBarStyle: {
+          backgroundColor: 'black',
+        },
+        tabBarActiveTintColor: 'white',
+        tabBarInactiveTintColor: 'gray',
+      }}
+    >
       <Tabs.Screen
-        name='home'
+        name='index'
         options={{ title: 'Home' }}
-      />
-      <Tabs.Screen
-        name='explore'
-        options={{ title: 'Explore' }}
       />
       <Tabs.Screen
         name='about'
         options={{ title: 'About' }}
       />
+      <Tabs.Screen
+        name='profile'
+        options={{ title: 'Profile' }}
+      />
+      <Tabs.Screen
+        name='summary'
+        options={{ title: 'Summary' }}
+      />
     </Tabs>
   );
 };
 
-export default TabLayout;
-
-const styles = StyleSheet.create({});
+export default TabsLayout;
