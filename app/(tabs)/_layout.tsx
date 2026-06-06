@@ -18,20 +18,16 @@ const TabsLayout = () => {
       }}
     >
       <Tabs.Screen
-        name='index'
-        options={{ title: 'Home' }}
+        name='create-note'
+        options={{ title: 'Create Note' }}
       />
       <Tabs.Screen
-        name='about'
-        options={{ title: 'About' }}
+        name='notes'
+        options={{ title: 'View Notes' }}
       />
       <Tabs.Screen
-        name='profile'
-        options={{ title: 'Profile' }}
-      />
-      <Tabs.Screen
-        name='summary'
-        options={{ title: 'Summary' }}
+        name='settings'
+        options={{ title: 'Settings' }}
       />
     </Tabs>
   );
